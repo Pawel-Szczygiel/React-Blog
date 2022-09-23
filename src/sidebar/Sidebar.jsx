@@ -1,11 +1,13 @@
 import './sidebar.css';
 
+const me = require('../images/me.jpg');
+
 const Sidebar = () => {
     return ( 
         <div className='sidebar'>
             <div className="sidebar-item">
                 <span className="sidebar-title">About Me</span>
-                <img src="" alt="" />
+                <img src={me} alt="" />
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae assumenda fugit expedita quas, qui quaerat corporis! lorem
                 </p>
