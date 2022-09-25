@@ -44,10 +44,15 @@
     /* text-transform: uppercase; */
 }
 
+
 .top-list-item {
     font-size: 18px;
     font-weight: 300;
     cursor: pointer;
+}
+
+.top-list-item:hover {
+    color: #b39656;
 }
 
 .top-search-icon {

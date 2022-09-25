@@ -1,5 +1,5 @@
 import './header.css';
-const image = require('../images/fantasy.jpg')
+const image = require('../../images/fantasy.jpg')
 
 const Header = () => {
     return ( 

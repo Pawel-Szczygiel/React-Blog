@@ -1,6 +1,6 @@
 import './sidebar.css';
 
-const me = require('../images/me.jpg');
+const me = require('../../images/me.jpg');
 
 const Sidebar = () => {
     return ( 

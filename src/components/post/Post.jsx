@@ -1,6 +1,6 @@
 import './post.css';
 
-const postimg1 = require('../images/p1.jpg')
+const postimg1 = require('../../images/p1.jpg')
 
 const Post = () => {
     return ( 
