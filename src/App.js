@@ -9,8 +9,7 @@ import Register from  './pages/register/Register';
 
 import {
     Routes,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 
 
