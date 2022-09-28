@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: calc(100vh - 50px);
-    background: url('../../images/login.jpg') center;
+    background: url('../../images/login.jpg') center ;
     background-size: cover;
 }
 
@@ -56,8 +56,8 @@
 
 .login-register-btn {
     position: absolute;
-    top: 80px;
-    right: 40px;
+    top: 65px;
+    right: 30px;
     background-color: teal;
     border: 2px solid teal;
     outline: none;

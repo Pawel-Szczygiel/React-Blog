@@ -59,8 +59,8 @@
 
 .login-register-btn {
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 65px;
+    right: 30px;
     background-color: teal;
     border: 2px solid teal;
     outline: none;
@@ -71,6 +71,11 @@
     border-radius: 4px;
     cursor: pointer;
     transition: .3s ease-in-out;
+}
+
+.position {
+    position: absolute;
+    top: 15px;
 }
 
 .login-register-btn:hover {

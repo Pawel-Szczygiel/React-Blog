@@ -1,4 +1,5 @@
 import './register.css';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     return ( 
@@ -11,6 +12,7 @@ const Register = () => {
                     className='login-input' 
                     placeholder='Enter your name...' 
                     id="user" 
+                    autoComplete='username'
                 />
                 <label htmlFor='email'>Email</label>
                 <input 
@@ -24,10 +26,17 @@ const Register = () => {
                     type="password" 
                     className='login-input' 
                     placeholder='Enter your password' 
-                    id="pass" />
-                <button className='login-btn'>Register</button>
+                    id="pass" 
+                    autoComplete='current-password'
+                    />
+                    
+                <button className='login-btn'>
+                    <Link to='/register'>Register</Link>
+                </button>
             </form>
-                <button className='login-register-btn'>Login</button>
+                <button className='login-register-btn position'>
+                    <Link to='/login'>Login</Link>
+                </button>
         </div>
      );
 }
