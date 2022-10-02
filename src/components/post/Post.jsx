@@ -1,23 +1,31 @@
+import { Link } from 'react-router-dom';
 import './post.css';
 
-const postimg1 = require('../../images/p1.jpg')
 
-const Post = () => {
+
+const Post = ({_id, title, desc, createdAt, photo, categories}) => {
     return ( 
         <div className='post'>
-            <img src={postimg1} alt="icons" className='post-image' />
+            {/* {photo && (
+                <img src={photo}  className='post-image' />
+            )} */}
             <div className="post-info">
                 <div className="post-cats">
-                    <span className="post-cat">Music</span>
-                    <span className="post-cat">Life</span>
+                    {categories.map(category => {
+                        <span className="post-cat">{category.name}</span>
+                    })}
+
+               
                 </div>
-                <span className="post-title">
-                    Lorem ipsum dolor sit.
-                </span>
+                <Link to={`/post/${_id}`}>
+                    <span className="post-title">{title}</span>
+                </Link>
                 <hr />
-                <span className='post-date'>1 hour ago</span>
+                <span className='post-date'>{new Date(createdAt).toDateString() }</span>
             </div>
-            <p className='post-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam neque enim quas molestiae libero laboriosam corrupti voluptate temporibus laborum, nobis beatae accusamus sit veritatis cumque hic ut eligendi doloribus explicabo dolorum repellat sequi ipsa. Provident sapiente delectus debitis deserunt nemo esse fugit facere, autem maxime ab veritatis, aliquam, ducimus velit.</p>
+            <p className='post-description'>
+                {desc}
+            </p>
         </div>
 
      );

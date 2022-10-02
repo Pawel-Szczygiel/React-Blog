@@ -2,15 +2,16 @@ import './posts.css';
 
 import Post from '../post/Post';
 
-const Posts = () => {
+const Posts = ({posts}) => {
+
+    const renderPosts = posts.map(post => {  
+        return <Post key={post._id} {...post} />
+    });
+
+
     return ( 
         <div className='posts'>
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+            {renderPosts} 
         </div>
      );
 }
