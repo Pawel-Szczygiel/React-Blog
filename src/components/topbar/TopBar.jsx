@@ -1,9 +1,15 @@
 import './topbar.css';
 import { Link } from 'react-router-dom';
+import { useGlobalContext } from '../../context/Context';
 
 
 const TopBar = () => {
-    const user = false;
+    const { user, dispatch } = useGlobalContext();
+    
+    function handleLogout() {
+        dispatch({type: 'LOGOUT'});
+    }
+
     return ( 
         <div className="top">
             <div className="top-left">
@@ -26,9 +32,10 @@ const TopBar = () => {
                     <li className="top-list-item">
                         <Link to='/write'>write</Link>
                     </li>
-                    <li className="top-list-item">
-                        {user && 'logout'}
-                    </li>
+                    {user && <li className="top-list-item" onClick={handleLogout}>
+                        logout
+                    </li>}
+                    
                 </ul>
             </div>
             <div className="top-right">

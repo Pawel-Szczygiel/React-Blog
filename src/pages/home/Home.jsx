@@ -12,18 +12,20 @@ const Home = () => {
 
     const [posts, setPosts] = useState([]);
     const { search } = useLocation();
-    console.log(search)
 
     async function fetchPosts() {
         const res = await axios.get(`/posts/${search}`);
         setPosts(res.data)
+        
     }
     
     useEffect(() => {
         fetchPosts()
     }, [search]);
-
+    
+    
     return ( 
+        
         <>
             <Header />
             <div className='home'>

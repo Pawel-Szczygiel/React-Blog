@@ -48,6 +48,11 @@
     transition: all .3s ease-in-out;
 }
 
+.login-btn:disabled:hover {
+    cursor: not-allowed;
+    background-color: lightpink;
+}
+
 .login-btn:hover,
 .login-btn:focus {
     background-color: rgb(247, 247, 247);

@@ -28,7 +28,7 @@ const Settings = () => {
                     <input type="email" id='email' placeholder='pawel86szczygiel@gmail.com' />
                     <label htmlFor="pass">Password</label>
                     <input type="password" id='pass' placeholder='Secret' />
-                    <button className="settings-submit">Update</button>
+                    <button className="settings-submit" type='submit'>Update</button>
                 </form>
             </div>
             <Sidebar />

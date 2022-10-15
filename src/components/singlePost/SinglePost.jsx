@@ -13,12 +13,12 @@ const SinglePost = () => {
 
     const [post, setPost] = useState([]);
 
+    async function getPost() {
+        const res = await axios.get(`/posts/${idPost}`);
+        setPost(res.data);
+    };
     
     useEffect(() => {
-        async function getPost() {
-            const res = await axios.get(`/posts/${idPost}`);
-            setPost(res.data);
-        };
         getPost();
     }, [idPost]);
 
